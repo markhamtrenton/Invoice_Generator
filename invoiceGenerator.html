@@ -1,0 +1,135 @@
+<html>
+<head>
+    <title>Invoice Generator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #invoiceForm input[type="text"], #invoiceForm input[type="number"], #invoiceForm textarea {
+            background-color: #f2f2f2;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: #444;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        #invoiceForm input[type="file"] {
+            margin-top: 10px;
+        }
+
+        #invoiceForm input[type="submit"] {
+            background-color: #989494;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+            #invoiceForm input[type="submit"]:hover {
+                background-color: #0069d9;
+                cursor: pointer;
+            }
+
+        #invoice {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        #printBtn {
+            background-color: #007bff;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+            #printBtn:hover {
+                background-color: #0069d9;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice Generator</h1>
+        <form id="invoiceForm">
+            <div class="form-group">
+                <label for="yourCompanyName">Your Company Name</label>
+                <input type="text" class="form-control" id="yourCompanyName" required="">
+            </div>
+            <div class="form-group">
+                <label for="clientName">Client Name</label>
+                <input type="text" class="form-control" id="clientName" required="">
+            </div>
+            <div class="form-group">
+                <label for="invoiceNumber">Invoice Number</label>
+                <input type="text" class="form-control" id="invoiceNumber" required="">
+            </div>
+            <div class="form-group">
+                <label for="photoOne">Job Photo</label>
+                <input type="file" class="form-control-file" id="photoOne">
+                <input type="file" class="form-control-file" id="photoTwo">
+                <input type="file" class="form-control-file" id="photoThree">
+                <input type="file" class="form-control-file" id="photoFour">
+
+            </div>
+          
+            <div class="form-group">
+                <label for="invoiceDate">Invoice Date</label>
+                <input type="date" class="form-control" id="invoiceDate" required="">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" rows="3" required=""></textarea>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" class="form-control" id="amount" required="">
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Invoice</button>
+
+        </form>
+        <div id="invoice" class="mt-5"></div>
+        <button id="printBtn" class="btn btn-success mt-3">Print Invoice</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="Script1.js"></script>
+</body>
+</html>
